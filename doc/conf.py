@@ -43,7 +43,13 @@ extensions = [
 # this is needed for some reason...
 # see https://github.com/numpy/numpydoc/issues/69
 numpydoc_class_members_toctree = False
-
+numpydoc_xref_param_type = True
+numpydoc_xref_aliases = {
+    'integer': ':class:`python:int`',
+}
+numpydoc_xref_ignore = {
+    'shape', 'n_features', 'or', 'optional', 'default',
+}
 
 # For maths, use mathjax by default and svg if NO_MATHJAX env variable is set
 # (useful for viewing the doc offline)
